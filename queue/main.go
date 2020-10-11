@@ -2,17 +2,18 @@ package main
 
 import "fmt"
 
+// Queue
 type Queue struct {
 	items []int
 }
 
 //Enqueue
-func (q *Queue) Enqueue(i int) {
+func (q *Queue) enqueue(i int) {
 	q.items = append(q.items, i)
 }
 
 //Dequeue
-func (q *Queue) Dequeue() int {
+func (q *Queue) dequeue() int {
 	toRemove := q.items[0]
 	q.items = q.items[1:]
 	return toRemove
@@ -21,10 +22,10 @@ func (q *Queue) Dequeue() int {
 func main() {
 	myQueue := Queue{}
 	fmt.Println(myQueue)
-	myQueue.Enqueue(100)
-	myQueue.Enqueue(200)
-	myQueue.Enqueue(300)
+	myQueue.enqueue(100)
+	myQueue.enqueue(200)
+	myQueue.enqueue(300)
 	fmt.Println(myQueue)
-	myQueue.Dequeue()
+	myQueue.dequeue()
 	fmt.Println(myQueue)
 }

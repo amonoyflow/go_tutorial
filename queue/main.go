@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-// Queue
+// Queue model
 type Queue struct {
 	items []int
 }

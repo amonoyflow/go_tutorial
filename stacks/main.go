@@ -2,17 +2,17 @@ package main
 
 import "fmt"
 
-// Stacks represents stack that holds a slice
+// Stack represents stack that holds a slice
 type Stack struct {
 	items []int
 }
 
-// Push
+// Push will push node into the stack
 func (s *Stack) Push(i int) {
 	s.items = append(s.items, i)
 }
 
-// Pop
+// Pop will remove node in stack
 func (s *Stack) Pop() int {
 	l := len(s.items) - 1
 	toRemove := s.items[l]
